@@ -13,7 +13,7 @@ import cems.project.services.UserService;
 
 @CrossOrigin
 @RestController
-@RequestMapping(path="cems")
+@RequestMapping(path="/cems")
 public class AuthenticationController {
 	@Autowired
 	private UserService userService;
