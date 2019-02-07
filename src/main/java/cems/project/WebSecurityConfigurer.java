@@ -61,7 +61,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     	BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-    	logger.info("Password encoded yo : "+  BCrypt.hashpw("58160673", BCrypt.gensalt()));
+    	logger.info("Password encoded yo : "+  BCrypt.hashpw("password", BCrypt.gensalt()));
         auth.userDetailsService(userServiceImp).passwordEncoder(passwordEncoder);
     }
  

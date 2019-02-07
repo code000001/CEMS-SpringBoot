@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import cems.project.model.StudentQualificationOrgDetail;
 import cems.project.model.StudentQualificationPersonDetail;
+import cems.project.model.StudentQualificationStatus;
 import cems.project.services.StudentQualificationService;
 
 @CrossOrigin
@@ -23,8 +25,18 @@ public class StudentQualificationController {
 	@GetMapping(path="/student_qc")
 	public @ResponseBody Iterable<StudentQualificationPersonDetail> getAllStudentRegisteredData(){
 		
-		//logger.info("bla"+ sqcService.getStudentRegisteredData().toString());
-
 		return sqcService.getStudentRegisteredData();
+	}
+	
+	@GetMapping(path="/org_name")
+	public @ResponseBody Iterable<StudentQualificationOrgDetail> getAllOrganizationData(){
+		
+		return sqcService.getOrganizationData();
+	}
+	
+	@GetMapping(path="/std_status")
+	public @ResponseBody Iterable<StudentQualificationStatus> getAllStudentStatusData(){
+		
+		return sqcService.getStudentStatusData();
 	}
 }

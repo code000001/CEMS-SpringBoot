@@ -28,6 +28,17 @@ public class StudentQualificationPersonDetail {
 	
 	@Column(name = "std_last_name_en")
 	private String stdLastNameEn;
+	
+	@Column(name = "std_status_id")
+	private String stdStatusId;
+
+	public String getStdStatusId() {
+		return stdStatusId;
+	}
+
+	public void setStdStatusId(String stdStatusId) {
+		this.stdStatusId = stdStatusId;
+	}
 
 	public Integer getId() {
 		return id;

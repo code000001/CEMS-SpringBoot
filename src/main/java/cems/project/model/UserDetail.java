@@ -23,10 +23,6 @@ public class UserDetail {
     @NotEmpty(message = "*Please provide an email")
     private String accLogin;
     
-    @Column(name = "acc_pass")
-    @Length(min = 5, message = "*Your password must have at least 5 characters")
-    @NotEmpty(message = "*Please provide your password")
-    private String accPassword;
     
     @Column(name= "acc_type_id")
     private Integer accTypeId;
@@ -55,11 +51,4 @@ public class UserDetail {
 		this.accLogin = accLogin;
 	}
 
-	public String getAccPassword() {
-		return accPassword;
-	}
-
-	public void setAccPassword(String accPassword) {
-		this.accPassword = accPassword;
-	}
 }
