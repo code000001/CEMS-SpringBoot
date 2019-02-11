@@ -17,6 +17,17 @@ public class StudentQualificationPersonDetail {
 	@Column(name = "std_id")
 	private String stdId;
 	
+	@Column(name = "std_acc_id")
+	private Integer stdAccId;
+	
+	public Integer getStdAccId() {
+		return stdAccId;
+	}
+
+	public void setStdAccId(Integer stdAccId) {
+		this.stdAccId = stdAccId;
+	}
+
 	@Column(name = "std_first_name_th")
 	private String stdFirstNameTh;
 	

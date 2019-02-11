@@ -27,6 +27,11 @@ public class StudentQualificationService {
 	private StudentQualificationStatusRepository sqcStatusRepository;
 	
 	
+public StudentQualificationPersonDetail getAccountRegisteredData(int std_acc_id){
+		
+		return sqcRepository.findByStdAccId(std_acc_id);
+	}
+	
 	public Iterable<StudentQualificationPersonDetail> getStudentRegisteredData(){
 		
 		return sqcRepository.findAll();
