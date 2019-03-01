@@ -1,5 +1,10 @@
 package cems.project.model;
 
-public class StaffTrainingManagement {
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 
+@Service
+@Configuration
+public class StaffTrainingManagement {
+	
 }
