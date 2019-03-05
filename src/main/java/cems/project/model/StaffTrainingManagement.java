@@ -31,12 +31,6 @@ public class StaffTrainingManagement {
 	@Column(name = "std_last_name_th")
 	private String stdLastNameTh;
 	
-	@Column(name = "std_first_name_en")
-	private String stdFirstNameEn;
-	
-	@Column(name = "std_last_name_en")
-	private String stdLastNameEn;
-	
 	@Column(name= "std_hr_prepare")
 	private Integer hourPrepare; 
 	
@@ -69,21 +63,5 @@ public class StaffTrainingManagement {
 
 	public void setStdLastNameTh(String stdLastNameTh) {
 		this.stdLastNameTh = stdLastNameTh;
-	}
-
-	public String getStdFirstNameEn() {
-		return stdFirstNameEn;
-	}
-
-	public void setStdFirstNameEn(String stdFirstNameEn) {
-		this.stdFirstNameEn = stdFirstNameEn;
-	}
-
-	public String getStdLastNameEn() {
-		return stdLastNameEn;
-	}
-
-	public void setStdLastNameEn(String stdLastNameEn) {
-		this.stdLastNameEn = stdLastNameEn;
 	}
 }
