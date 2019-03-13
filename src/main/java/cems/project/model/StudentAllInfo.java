@@ -19,6 +19,9 @@ public class StudentAllInfo {
     @Column(name = "std_acc_id")
     private Integer stdAccId;
 
+    @Column(name = "std_id")
+    private Integer stdId;
+
     @Column(name = "status_name_th")
     private String stdStatusTh;
 
@@ -204,6 +207,9 @@ public class StudentAllInfo {
      * @return the stdFirstNameTh
      */
     public String getStdFirstNameTh() {
+        if(stdFirstNameTh == null){
+            return "-";
+        }
         return stdFirstNameTh;
     }
 
@@ -218,6 +224,9 @@ public class StudentAllInfo {
      * @return the stdLastNameTh
      */
     public String getStdLastNameTh() {
+        if(stdLastNameTh == null){
+            return "-";
+        }
         return stdLastNameTh;
     }
 
@@ -232,6 +241,9 @@ public class StudentAllInfo {
      * @return the stdFirstNameEn
      */
     public String getStdFirstNameEn() {
+        if(stdFirstNameEn == null){
+            return "-";
+        }
         return stdFirstNameEn;
     }
 
@@ -246,6 +258,9 @@ public class StudentAllInfo {
      * @return the stdLastNameEn
      */
     public String getStdLastNameEn() {
+        if(stdLastNameEn == null){
+            return "-";
+        }
         return stdLastNameEn;
     }
 
@@ -260,6 +275,9 @@ public class StudentAllInfo {
      * @return the stdTestScore
      */
     public String getStdTestScore() {
+        if(stdTestScore == null){
+            return "-";
+        }
         return stdTestScore;
     }
 
@@ -274,6 +292,9 @@ public class StudentAllInfo {
      * @return the stdHrPrepare
      */
     public Integer getStdHrPrepare() {
+        if(stdHrPrepare == null){
+            return 0;
+        }
         return stdHrPrepare;
     }
 
@@ -288,6 +309,9 @@ public class StudentAllInfo {
      * @return the stdHrConference
      */
     public Integer getStdHrConference() {
+        if(stdHrConference == null){
+            return 0;
+        }
         return stdHrConference;
     }
 
@@ -302,6 +326,9 @@ public class StudentAllInfo {
      * @return the stdGpax
      */
     public String getStdGpax() {
+        if(stdGpax == null){
+            return "-";
+        }
         return stdGpax;
     }
 
@@ -316,6 +343,9 @@ public class StudentAllInfo {
      * @return the stdYear
      */
     public Integer getStdYear() {
+        if(stdYear == null){
+            return 0;
+        }
         return stdYear;
     }
 
@@ -330,6 +360,9 @@ public class StudentAllInfo {
      * @return the stdCourse
      */
     public String getStdCourse() {
+        if(stdCourse == null){
+            return "-";
+        }
         return stdCourse;
     }
 
@@ -344,6 +377,9 @@ public class StudentAllInfo {
      * @return the stdBranch
      */
     public String getStdBranch() {
+        if(stdBranch == null){
+            return "-";
+        }
         return stdBranch;
     }
 
@@ -358,6 +394,9 @@ public class StudentAllInfo {
      * @return the stdPassedCredit
      */
     public Integer getStdPassedCredit() {
+        if(stdPassedCredit == null){
+            return 0;
+        }
         return stdPassedCredit;
     }
 
@@ -372,6 +411,9 @@ public class StudentAllInfo {
      * @return the stdHouseParticularsAddress
      */
     public String getStdHouseParticularsAddress() {
+        if(stdHouseParticularsAddress == null){
+            return "-";
+        }
         return stdHouseParticularsAddress;
     }
 
@@ -386,6 +428,9 @@ public class StudentAllInfo {
      * @return the stdNowAddress
      */
     public String getStdNowAddress() {
+        if(stdNowAddress == null){
+            return "-";
+        }
         return stdNowAddress;
     }
 
@@ -400,6 +445,9 @@ public class StudentAllInfo {
      * @return the stdTel
      */
     public String getStdTel() {
+        if(stdTel == null){
+            return "-";
+        }
         return stdTel;
     }
 
@@ -414,6 +462,9 @@ public class StudentAllInfo {
      * @return the stdMmobileTel
      */
     public String getStdMmobileTel() {
+        if(stdMmobileTel == null){
+            return "-";
+        }
         return stdMmobileTel;
     }
 
@@ -428,6 +479,9 @@ public class StudentAllInfo {
      * @return the stdEmail
      */
     public String getStdEmail() {
+        if(stdEmail == null){
+            return "-";
+        }
         return stdEmail;
     }
 
@@ -442,6 +496,9 @@ public class StudentAllInfo {
      * @return the stdPostNo
      */
     public String getStdPostNo() {
+        if(stdPostNo == null){
+            return "-";
+        }
         return stdPostNo;
     }
 
@@ -456,6 +513,9 @@ public class StudentAllInfo {
      * @return the stdParentFirstName
      */
     public String getStdParentFirstName() {
+        if(stdParentFirstName == null){
+            return "-";
+        }
         return stdParentFirstName;
     }
 
@@ -470,6 +530,9 @@ public class StudentAllInfo {
      * @return the stdParentLastName
      */
     public String getStdParentLastName() {
+        if(stdParentLastName == null){
+            return "-";
+        }
         return stdParentLastName;
     }
 
@@ -484,6 +547,9 @@ public class StudentAllInfo {
      * @return the stdParentRelation
      */
     public String getStdParentRelation() {
+        if(stdParentRelation == null){
+            return "-";
+        }
         return stdParentRelation;
     }
 
@@ -498,6 +564,9 @@ public class StudentAllInfo {
      * @return the stdParentAddress
      */
     public String getStdParentAddress() {
+        if(stdParentAddress == null){
+            return "-";
+        }
         return stdParentAddress;
     }
 
@@ -512,6 +581,9 @@ public class StudentAllInfo {
      * @return the stdParentEmail
      */
     public String getStdParentEmail() {
+        if(stdParentEmail == null){
+            return "-";
+        }
         return stdParentEmail;
     }
 
@@ -526,6 +598,9 @@ public class StudentAllInfo {
      * @return the stdParentTel
      */
     public String getStdParentTel() {
+        if(stdParentTel == null){
+            return "-";
+        }
         return stdParentTel;
     }
 
@@ -540,6 +615,9 @@ public class StudentAllInfo {
      * @return the stdParentPostNo
      */
     public String getStdParentPostNo() {
+        if(stdParentPostNo == null){
+            return "-";
+        }
         return stdParentPostNo;
     }
 
@@ -554,6 +632,9 @@ public class StudentAllInfo {
      * @return the stdParentMobileTel
      */
     public String getStdParentMobileTel() {
+        if(stdParentMobileTel == null){
+            return "-";
+        }
         return stdParentMobileTel;
     }
 
@@ -568,6 +649,9 @@ public class StudentAllInfo {
      * @return the stdBornPlace
      */
     public String getStdBornPlace() {
+        if(stdBornPlace == null){
+            return "-";
+        }
         return stdBornPlace;
     }
 
@@ -582,6 +666,9 @@ public class StudentAllInfo {
      * @return the std_LastGpa
      */
     public String getStd_LastGpa() {
+        if(std_LastGpa == null){
+            return "-";
+        }
         return std_LastGpa;
     }
 
@@ -596,6 +683,9 @@ public class StudentAllInfo {
      * @return the stdBornDate
      */
     public String getStdBornDate() {
+        if(stdBornDate == null){
+            return "-";
+        }
         return stdBornDate;
     }
 
@@ -610,6 +700,9 @@ public class StudentAllInfo {
      * @return the stdAge
      */
     public Integer getStdAge() {
+        if(stdAge == null){
+            return 0;
+        }
         return stdAge;
     }
 
@@ -624,6 +717,9 @@ public class StudentAllInfo {
      * @return the genderNameTh
      */
     public String getGenderNameTh() {
+        if(genderNameTh == null){
+            return "-";
+        }
         return genderNameTh;
     }
 
@@ -638,6 +734,9 @@ public class StudentAllInfo {
      * @return the genderNameEn
      */
     public String getGenderNameEn() {
+        if(genderNameEn == null){
+            return "-";
+        }
         return genderNameEn;
     }
 
@@ -652,7 +751,11 @@ public class StudentAllInfo {
      * @return the stdPersonId
      */
     public String getStdPersonId() {
-        return stdPersonId;
+        if(stdPersonId == null){
+            return "-";
+        }
+        return stdPersonId.substring(0,1) + '-' + stdPersonId.substring(1,5) + '-' + stdPersonId.substring(5,10) + '-' + stdPersonId.substring(10,12) + '-' + stdPersonId.substring(12,13);
+        // return stdPersonId; 
     }
 
     /**
@@ -666,6 +769,9 @@ public class StudentAllInfo {
      * @return the stdNation
      */
     public String getStdNation() {
+        if(stdNation == null){
+            return "-";
+        }
         return stdNation;
     }
 
@@ -680,6 +786,9 @@ public class StudentAllInfo {
      * @return the stdReligion
      */
     public String getStdReligion() {
+        if(stdReligion == null){
+            return "-";
+        }
         return stdReligion;
     }
 
@@ -694,6 +803,9 @@ public class StudentAllInfo {
      * @return the stdHeight
      */
     public String getStdHeight() {
+        if(stdHeight == null){
+            return "-";
+        }
         return stdHeight;
     }
 
@@ -708,6 +820,9 @@ public class StudentAllInfo {
      * @return the stdWeigh
      */
     public String getStdWeigh() {
+        if(stdWeigh == null){
+            return "-";
+        }
         return stdWeigh;
     }
 
@@ -722,6 +837,9 @@ public class StudentAllInfo {
      * @return the stdFatherNameTh
      */
     public String getStdFatherNameTh() {
+        if(stdFatherNameTh == null){
+            return "-";
+        }
         return stdFatherNameTh;
     }
 
@@ -736,6 +854,9 @@ public class StudentAllInfo {
      * @return the stdFatherNameEn
      */
     public String getStdFatherNameEn() {
+        if(stdFatherNameEn == null){
+            return "-";
+        }
         return stdFatherNameEn;
     }
 
@@ -750,6 +871,9 @@ public class StudentAllInfo {
      * @return the stdMotherNameTh
      */
     public String getStdMotherNameTh() {
+        if(stdMotherNameTh == null){
+            return "-";
+        }
         return stdMotherNameTh;
     }
 
@@ -764,6 +888,9 @@ public class StudentAllInfo {
      * @return the stdMotherNameEn
      */
     public String getStdMotherNameEn() {
+        if(stdMotherNameEn == null){
+            return "-";
+        }
         return stdMotherNameEn;
     }
 
@@ -778,6 +905,9 @@ public class StudentAllInfo {
      * @return the stdFatherJob
      */
     public String getStdFatherJob() {
+        if(stdFatherJob == null){
+            return "-";
+        }
         return stdFatherJob;
     }
 
@@ -792,6 +922,9 @@ public class StudentAllInfo {
      * @return the stdMotherJob
      */
     public String getStdMotherJob() {
+        if(stdMotherJob == null){
+            return "-";
+        }
         return stdMotherJob;
     }
 
@@ -806,6 +939,9 @@ public class StudentAllInfo {
      * @return the stdFatherMobileTel
      */
     public String getStdFatherMobileTel() {
+        if(stdFatherMobileTel == null){
+            return "-";
+        }
         return stdFatherMobileTel;
     }
 
@@ -820,6 +956,9 @@ public class StudentAllInfo {
      * @return the stdMotherMobileTel
      */
     public String getStdMotherMobileTel() {
+        if(stdMotherMobileTel == null){
+            return "-";
+        }
         return stdMotherMobileTel;
     }
 
@@ -834,6 +973,9 @@ public class StudentAllInfo {
      * @return the stdHsStudyPlace
      */
     public String getStdHsStudyPlace() {
+        if(stdHsStudyPlace == null){
+            return "-";
+        }
         return stdHsStudyPlace;
     }
 
@@ -848,6 +990,9 @@ public class StudentAllInfo {
      * @return the stdHsStartYear
      */
     public Integer getStdHsStartYear() {
+        if(stdHsStartYear == null){
+            return 0;
+        }
         return stdHsStartYear;
     }
 
@@ -862,6 +1007,9 @@ public class StudentAllInfo {
      * @return the stdHsEndYear
      */
     public Integer getStdHsEndYear() {
+        if(stdHsEndYear == null){
+            return 0;
+        }
         return stdHsEndYear;
     }
 
@@ -876,6 +1024,9 @@ public class StudentAllInfo {
      * @return the stdHsGpa
      */
     public String getStdHsGpa() {
+        if(stdHsGpa == null){
+            return "-";
+        }
         return stdHsGpa;
     }
 
@@ -890,6 +1041,9 @@ public class StudentAllInfo {
      * @return the stdStatusTh
      */
     public String getStdStatusTh() {
+        if(stdStatusTh == null){
+            return "-";
+        }
         return stdStatusTh;
     }
 
@@ -904,6 +1058,9 @@ public class StudentAllInfo {
      * @return the stdStatusEn
      */
     public String getStdStatusEn() {
+        if(stdStatusEn == null){
+            return "-";
+        }
         return stdStatusEn;
     }
 
@@ -912,6 +1069,20 @@ public class StudentAllInfo {
      */
     public void setStdStatusEn(String stdStatusEn) {
         this.stdStatusEn = stdStatusEn;
+    }
+
+    /**
+     * @return the stdId
+     */
+    public Integer getStdId() {
+        return stdId;
+    }
+
+    /**
+     * @param stdId the stdId to set
+     */
+    public void setStdId(Integer stdId) {
+        this.stdId = stdId;
     }
 
 }
