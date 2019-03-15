@@ -1,7 +1,5 @@
 package cems.project.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,12 +31,17 @@ public class AnnouncementController {
 	private AnnouncementService annService;
 	
 	@GetMapping(path="/announcement")
-	public List<Announcement> getAllAnnouncement() {
+	public Iterable<Announcement> getAllAnnouncement() {
 		return annService.getAnnouncement();
 	}
 	
+	@GetMapping(path="/announcement_org/{id}")
+	public @ResponseBody Iterable<Announcement> getByannAccIdAnnouncement(@PathVariable("id") int annOrgId) {	
+		return annService.getAnnouncementByannOrgId(annOrgId);
+	}
+	
 	@GetMapping(path="/announcement/{id}")
-	public @ResponseBody List<Announcement> getByIdAnnouncement(@PathVariable("id") int id) {	
+	public @ResponseBody Iterable<Announcement> getByIdAnnouncement(@PathVariable("id") int id) {	
 		return annService.getAnnouncementById(id);
 	}
 	
@@ -48,7 +51,7 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_status/{id}")
-	public @ResponseBody List<AnnouncementStatus> getByIdAnnouncementStatus(@PathVariable("id") int id) {	
+	public @ResponseBody Iterable<AnnouncementStatus> getByIdAnnouncementStatus(@PathVariable("id") int id) {	
 		return annService.getAnnouncementStatusById(id);
 	}
 	
@@ -58,7 +61,7 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_knowledge/{id}")
-	public @ResponseBody List<KnowledgeRequirement> getByIdKnowledgeRequirement(@PathVariable("id") int annKreqStatusId) {	
+	public @ResponseBody Iterable<KnowledgeRequirement> getByIdKnowledgeRequirement(@PathVariable("id") int annKreqStatusId) {	
 		return annService.getKnowledgeRequirementById(annKreqStatusId);
 	}
 	
@@ -68,7 +71,7 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_logKnowledge/{id}")
-	public @ResponseBody List<LogKnowledge> getByIdLogKnowledge(@PathVariable("id") int logkAnnId) {	
+	public @ResponseBody Iterable<LogKnowledge> getByIdLogKnowledge(@PathVariable("id") int logkAnnId) {	
 		return annService.getLogKnowledgeById(logkAnnId);
 	}
 	
@@ -78,7 +81,7 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_logPosition/{id}")
-	public @ResponseBody List<LogPosition> getByIdLogPosition(@PathVariable("id") int logpAnnId) {	
+	public @ResponseBody Iterable<LogPosition> getByIdLogPosition(@PathVariable("id") int logpAnnId) {	
 		return annService.getLogPositionById(logpAnnId);
 	}
 	
@@ -88,12 +91,12 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_position_data/{id}")
-	public @ResponseBody List<PositionData> getByIdPositionData(@PathVariable("id") int annPosStatusId) {	
+	public @ResponseBody Iterable<PositionData> getByIdPositionData(@PathVariable("id") int annPosStatusId) {	
 		return annService.getPositionDataById(annPosStatusId);
 	}
 	
 	@GetMapping(path="/announcement_organization_data/{id}")
-	public @ResponseBody List<OrganizationData> getByIdOrganizationData(@PathVariable("id") int id) {	
+	public @ResponseBody Iterable<OrganizationData> getByIdOrganizationData(@PathVariable("id") int id) {	
 		return annService.getOrganizationDataById(id);
 	}
 	
@@ -103,7 +106,7 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_organization_status/{id}")
-	public @ResponseBody List<OrganizationStatus> getByIdOrganizationStatus(@PathVariable("id") int id) {	
+	public @ResponseBody Iterable<OrganizationStatus> getByIdOrganizationStatus(@PathVariable("id") int id) {	
 		return annService.getOrganizationStatusById(id);
 	}
 	
@@ -113,8 +116,8 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_organization_type/{id}")
-	public @ResponseBody List<OrganizationType> getByIdOrganizationType(@PathVariable("id") int id) {	
-		return annService.getOrganizationTypeById(id);
+	public @ResponseBody Iterable<OrganizationType> getByIdOrganizationType(@PathVariable("id") int id) {	
+		return (Iterable<OrganizationType>) annService.getOrganizationTypeById(id);
 	}
 	
 	@GetMapping(path="/announcement_organization_type")

@@ -1,7 +1,5 @@
 package cems.project.services;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
@@ -56,77 +54,81 @@ public class AnnouncementService {
 	@Autowired
 	private OrganizationTypeRepository organizationTypeRepository;
 	
-	public List<Announcement> getAnnouncementById(int id) {
+	public Iterable<Announcement> getAnnouncementByannOrgId(int annOrgId) {
+		return annRepository.getByannOrgId(annOrgId);
+	}
+	
+	public Iterable<Announcement> getAnnouncementById(int id) {
 		return annRepository.getById(id);
 	}
 
-	public List<Announcement> getAnnouncement() {
-		return (List<Announcement>) annRepository.findAll();
+	public Iterable<Announcement> getAnnouncement() {
+		return annRepository.findAll();
 	}
 	
-	public List<AnnouncementStatus> getAnnouncementStatusById(int id) {
+	public Iterable<AnnouncementStatus> getAnnouncementStatusById(int id) {
 		return statusRepository.getAnnouncementStatusById(id);
 	}
 	
-	public List<AnnouncementStatus> getAnnouncementStatus() {
-		return (List<AnnouncementStatus>) statusRepository.findAll();
+	public Iterable<AnnouncementStatus> getAnnouncementStatus() {
+		return statusRepository.findAll();
 	}
 	
 	
-	public List<KnowledgeRequirement> getKnowledgeRequirementById(int annKreqStatusId) {
+	public Iterable<KnowledgeRequirement> getKnowledgeRequirementById(int annKreqStatusId) {
 		return knowledgeRequirRespository.getKnowledgeRequirementByannKreqStatusId(annKreqStatusId);
 	}
 	
-	public List<KnowledgeRequirement> getKnowledgeRequirement() {
-		return (List<KnowledgeRequirement>) knowledgeRequirRespository.findAll();
+	public Iterable<KnowledgeRequirement> getKnowledgeRequirement() {
+		return knowledgeRequirRespository.findAll();
 	}
 	
-	public List<LogKnowledge> getLogKnowledgeById(int logkAnnId) {
+	public Iterable<LogKnowledge> getLogKnowledgeById(int logkAnnId) {
 		return logKnowledgeRequirRepository.getLogKnowledgeBylogkAnnId(logkAnnId);
 	}
 	
-	public List<LogKnowledge> getLogKnowledge() {
-		return (List<LogKnowledge>) logKnowledgeRequirRepository.findAll();
+	public Iterable<LogKnowledge> getLogKnowledge() {
+		return logKnowledgeRequirRepository.findAll();
 	}
 	
-	public List<LogPosition> getLogPositionById(int logpAnnId) {
+	public Iterable<LogPosition> getLogPositionById(int logpAnnId) {
 		return logPositionRepository.getLogPositionBylogpAnnId(logpAnnId);
 	}
 
-	public List<LogPosition> getLogPosition() {
-		return (List<LogPosition>) logPositionRepository.findAll();
+	public Iterable<LogPosition> getLogPosition() {
+		return logPositionRepository.findAll();
 	}
 	
-	public List<PositionData> getPositionDataById(int annPosStatusId) {
+	public Iterable<PositionData> getPositionDataById(int annPosStatusId) {
 		return positionDataRepository.getPositionDataByannPosStatusId(annPosStatusId);
 	}
 	
-	public List<PositionData> getPositionData() {
-		return (List<PositionData>) positionDataRepository.findAll();
+	public Iterable<PositionData> getPositionData() {
+		return positionDataRepository.findAll();
 	}
 	
-	public List<OrganizationData> getOrganizationDataById(int id) {
+	public Iterable<OrganizationData> getOrganizationDataById(int id) {
 		return organizationDataRepository.getOrganizationDataById(id);
 	}
 	
-	public List<OrganizationData> getOrganization() {
-		return (List<OrganizationData>) organizationDataRepository.findAll();
+	public Iterable<OrganizationData> getOrganization() {
+		return organizationDataRepository.findAll();
 	}
 	
-	public List<OrganizationStatus> getOrganizationStatusById(int id) {
+	public Iterable<OrganizationStatus> getOrganizationStatusById(int id) {
 		return organizationStatusRepository.getOrganizationStatusById(id);
 	}
 	
-	public List<OrganizationStatus> getOrganizationStatus() {
-		return (List<OrganizationStatus>) organizationStatusRepository.findAll();
+	public Iterable<OrganizationStatus> getOrganizationStatus() {
+		return organizationStatusRepository.findAll();
 	}
 	
-	public List<OrganizationType> getOrganizationTypeById(int id) {
+	public Iterable<OrganizationType> getOrganizationTypeById(int id) {
 		return organizationTypeRepository.getOrganizationTypeById(id);
 	}
 	
-	public List<OrganizationType> getOrganizationType() {
-		return (List<OrganizationType>) organizationTypeRepository.findAll();
+	public Iterable<OrganizationType> getOrganizationType() {
+		return organizationTypeRepository.findAll();
 	}
 	
 	public Announcement addAnnouncement(Announcement newAnnouncement) {

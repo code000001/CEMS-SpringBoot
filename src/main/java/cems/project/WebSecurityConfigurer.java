@@ -22,7 +22,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import cems.project.services.UserServiceImp;
 
 @Configuration
-public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter{
+	
 	Logger logger = LoggerFactory.getLogger(WebSecurityConfigurer.class);
 	@Autowired
 	UserServiceImp userServiceImp;
@@ -44,7 +45,8 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 		http.cors()
 		.and().csrf().disable()
 		.authorizeRequests()
-		.antMatchers("/cems/index").permitAll()
+		.antMatchers("/cems/index","/cems/announcement", "/cems/announcement_organization_data",
+				"/cems/announcement_organization_data/{\\d+}").permitAll()
 		.anyRequest().authenticated()
 		.and().logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler())
 		.and().httpBasic()
@@ -61,9 +63,8 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     	BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-    	logger.info("Password encoded yo : "+  BCrypt.hashpw("password", BCrypt.gensalt()));
+    	logger.info("Password encoded yo : "+  BCrypt.hashpw("58160673", BCrypt.gensalt()));
         auth.userDetailsService(userServiceImp).passwordEncoder(passwordEncoder);
     }
- 
-
+	
 }
