@@ -1,5 +1,7 @@
 package cems.project.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
@@ -74,9 +76,8 @@ public class AnnouncementService {
 		return statusRepository.findAll();
 	}
 	
-	
-	public Iterable<KnowledgeRequirement> getKnowledgeRequirementById(int annKreqStatusId) {
-		return knowledgeRequirRespository.getKnowledgeRequirementByannKreqStatusId(annKreqStatusId);
+	public Optional<KnowledgeRequirement> getKnowledgeRequirementById(Integer id) {
+		return knowledgeRequirRespository.findById(id);
 	}
 	
 	public Iterable<KnowledgeRequirement> getKnowledgeRequirement() {
@@ -99,8 +100,8 @@ public class AnnouncementService {
 		return logPositionRepository.findAll();
 	}
 	
-	public Iterable<PositionData> getPositionDataById(int annPosStatusId) {
-		return positionDataRepository.getPositionDataByannPosStatusId(annPosStatusId);
+	public Iterable<PositionData> getPositionDataById(int Id) {
+		return positionDataRepository.getPositionDataById(Id);
 	}
 	
 	public Iterable<PositionData> getPositionData() {

@@ -1,5 +1,7 @@
 package cems.project.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -61,8 +63,8 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_knowledge/{id}")
-	public @ResponseBody Iterable<KnowledgeRequirement> getByIdKnowledgeRequirement(@PathVariable("id") int annKreqStatusId) {	
-		return annService.getKnowledgeRequirementById(annKreqStatusId);
+	public @ResponseBody Optional<KnowledgeRequirement> getByIdKnowledgeRequirement(@PathVariable("id") Integer id) {	
+		return annService.getKnowledgeRequirementById(id);
 	}
 	
 	@GetMapping(path="/announcement_logKnowledge")
@@ -91,8 +93,8 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_position_data/{id}")
-	public @ResponseBody Iterable<PositionData> getByIdPositionData(@PathVariable("id") int annPosStatusId) {	
-		return annService.getPositionDataById(annPosStatusId);
+	public @ResponseBody Iterable<PositionData> getByIdPositionData(@PathVariable("id") int Id) {	
+		return annService.getPositionDataById(Id);
 	}
 	
 	@GetMapping(path="/announcement_organization_data/{id}")

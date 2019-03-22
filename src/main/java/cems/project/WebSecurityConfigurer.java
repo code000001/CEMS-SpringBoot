@@ -46,7 +46,9 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter{
 		.and().csrf().disable()
 		.authorizeRequests()
 		.antMatchers("/cems/index","/cems/announcement", "/cems/announcement_organization_data",
-				"/cems/announcement_organization_data/{\\d+}").permitAll()
+				"/cems/announcement_organization_data/{\\d+}", "/cems/announcement_org/{\\d+}",
+				"/cems/announcement_knowledge/{\\d+}","/cems/announcement_logKnowledge/{\\d+}",
+				"/cems/announcement_logPosition/{\\d+}","/cems/announcement_position_data/{\\d+}").permitAll()
 		.anyRequest().authenticated()
 		.and().logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler())
 		.and().httpBasic()
