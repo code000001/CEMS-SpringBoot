@@ -93,8 +93,8 @@ public class AnnouncementController {
 	}
 	
 	@GetMapping(path="/announcement_position_data/{id}")
-	public @ResponseBody Iterable<PositionData> getByIdPositionData(@PathVariable("id") int Id) {	
-		return annService.getPositionDataById(Id);
+	public @ResponseBody Optional<PositionData> getByIdPositionData(@PathVariable("id") int id) {	
+		return annService.getPositionDataById(id);
 	}
 	
 	@GetMapping(path="/announcement_organization_data/{id}")

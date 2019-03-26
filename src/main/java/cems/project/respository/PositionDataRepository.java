@@ -1,11 +1,11 @@
 package cems.project.respository;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
 
 import cems.project.model.PositionData;
 
 public interface PositionDataRepository extends CrudRepository<PositionData, Integer>  {
-	public List<PositionData> getPositionDataById(int Id);
+	public Optional<PositionData> getById(int id);
 }

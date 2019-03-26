@@ -100,8 +100,8 @@ public class AnnouncementService {
 		return logPositionRepository.findAll();
 	}
 	
-	public Iterable<PositionData> getPositionDataById(int Id) {
-		return positionDataRepository.getPositionDataById(Id);
+	public Optional<PositionData> getPositionDataById(int id) {
+		return positionDataRepository.getById(id);
 	}
 	
 	public Iterable<PositionData> getPositionData() {
