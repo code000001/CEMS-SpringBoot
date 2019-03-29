@@ -134,7 +134,29 @@ public class AnnouncementService {
 	
 	public Announcement addAnnouncement(Announcement newAnnouncement) {
 		Announcement announcement = annRepository.save(newAnnouncement);
+		if((newAnnouncement.getAnnEndDate()).equals(null)||(newAnnouncement.getAnnStartDate()).equals(null)
+			||(newAnnouncement.getAnnOrgId()).equals(null)||(newAnnouncement.getAnnItemReq()).equals(null)
+			||(newAnnouncement.getAnnAccId()).equals(null)||(newAnnouncement.getAnnStdAmount()).equals(null)
+			||(newAnnouncement.getAnnWorkshift()).equals(null)||(newAnnouncement.getAnnReward()).equals(null)) {
+			throw new NullPointerException("Have value is null");
+		}
 		return annRepository.save(announcement);
+	}
+	
+	public LogPosition addLogPosition(LogPosition newLogPosition) {
+		LogPosition logposition = logPositionRepository.save(newLogPosition);
+		if((newLogPosition.getLogpAnnId()).equals(null)||(newLogPosition.getLogpAnnPosId()).equals(null)) {
+				throw new NullPointerException("Have value is null");
+			}
+			return logPositionRepository.save(logposition);
+	}
+	
+	public LogKnowledge addLogKnowledge(LogKnowledge newLogKnowledge) {
+		LogKnowledge logposition = logKnowledgeRequirRepository.save(newLogKnowledge);
+		if((newLogKnowledge.getLogkAnnId()).equals(null)||(newLogKnowledge.getLogkAnnKrdId()).equals(null)) {
+				throw new NullPointerException("Have value is null");
+			}
+			return logKnowledgeRequirRepository.save(logposition);
 	}
 
 	public Announcement updateAnnouncement(int id, Announcement newAnnouncement) {

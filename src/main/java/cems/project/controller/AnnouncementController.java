@@ -132,6 +132,18 @@ public class AnnouncementController {
 		return annService.addAnnouncement(newAnnouncement);
 	}
 	
+	
+	@PostMapping(path="/announcement_logKnowledge")
+	public LogKnowledge addLogKnowledge(@RequestBody LogKnowledge newLogKnowledge) {
+		return annService.addLogKnowledge(newLogKnowledge);
+	}
+	
+	@PostMapping(path="/announcement_logPosition")
+	public LogPosition addLogPosition(@RequestBody LogPosition newLogPosition) {
+		return annService.addLogPosition(newLogPosition);
+	}
+	
+	
 	@PutMapping(path="/announcement/{id}")
 	public Announcement updateAnnouncement(@PathVariable("id") int id,@RequestBody Announcement updateAnnouncement) {
 		return annService.updateAnnouncement(id, updateAnnouncement);
