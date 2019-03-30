@@ -3,6 +3,9 @@ package cems.project.controller;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -128,8 +131,22 @@ public class AnnouncementController {
 	}
 	
 	@PostMapping(path="/announcement")
-	public Announcement addAnnouncement(@RequestBody Announcement newAnnouncement) {
-		return annService.addAnnouncement(newAnnouncement);
+	public ResponseEntity<String> addAnnouncement(@RequestBody Announcement newAnnouncement) {
+		HttpHeaders responseHeaders = new HttpHeaders();
+		   
+		if((newAnnouncement.getAnnEndDate()).equals(null)||(newAnnouncement.getAnnStartDate()).equals(null)
+				||(newAnnouncement.getAnnOrgId()).equals(null)||(newAnnouncement.getAnnItemReq()).equals(null)
+				||(newAnnouncement.getAnnAccId()).equals(null)||(newAnnouncement.getAnnStdAmount()).equals(null)
+				||(newAnnouncement.getAnnWorkshift()).equals(null)||(newAnnouncement.getAnnReward()).equals(null)) {
+			responseHeaders.set("ResponeAddAnnouncement", "Fail");
+			return new ResponseEntity<String>("Fail", responseHeaders, HttpStatus.BAD_REQUEST);
+				
+			}
+		else {
+		annService.addAnnouncement(newAnnouncement);	
+		responseHeaders.set("ResponeAddAnnouncement", "Success");
+		return new ResponseEntity<String>("Success", responseHeaders, HttpStatus.ACCEPTED);
+		}
 	}
 	
 	
