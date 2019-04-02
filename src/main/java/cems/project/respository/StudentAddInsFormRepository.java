@@ -1,0 +1,12 @@
+package cems.project.respository;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+import cems.project.model.StudentAddInsForm;
+
+public interface StudentAddInsFormRepository extends CrudRepository<StudentAddInsForm, Integer> {
+
+	public StudentAddInsForm findById(int id);
+	public List<StudentAddInsForm> getBYiD(int id);
+}

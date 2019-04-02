@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 @RestController
 @RequestMapping(path="/cems")
-public class StaffTrainingManagementController {
+public class TrainingManagementController {
 	
 
 }
