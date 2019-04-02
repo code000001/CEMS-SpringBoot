@@ -8,20 +8,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import cems.project.model.StudentAddInsForm;
-import cems.project.services.StudentAddInsFormService;
-
+import cems.project.model.StudentPrintout;
+import cems.project.services.StudentPrintoutService;
 @CrossOrigin
 @RestController
 @RequestMapping(path="/cems")
-public class StudentAddInsFormController {
-	
+public class StudentPrintoutController {
+
 	@Autowired
-	private StudentAddInsFormService stdaddService;
+	private StudentPrintoutService stdprintoutService;
 	
-//	@GetMapping(path="/std_addform/{id}")
-	//public @ResponseBody Iterable<StudentAddInsForm> getBystdId(@PathVariable("id") int stdId) {	
-		//return stdaddService.getstddataById(stdId);
-	//}
+	@GetMapping(path="/std_printout_ins001/{id}")
+	public @ResponseBody Iterable<StudentPrintout> getBystdId(@PathVariable("id") int stdId) {	
+		return stdprintoutService.getstudentdata(stdId);
+	}
 	
 }

@@ -18,6 +18,10 @@ public class StudentAddInsFormService {
 		return stdAddInsForm.findAll();
 	}
 	
+	//public Iterable<StudentAddInsForm> getstddataById(int stdId){
+	//	return stdAddInsForm.getBystdId(stdId);
+	//}
+	
 	public StudentAddInsForm addInsForm(StudentAddInsForm newStudentAddInsForm) {
 		StudentAddInsForm stdaddinsform = stdAddInsForm.save(newStudentAddInsForm);
 		return stdAddInsForm.save(stdaddinsform);
