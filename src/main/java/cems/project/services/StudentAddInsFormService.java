@@ -12,18 +12,19 @@ import cems.project.respository.StudentAddInsFormRepository;
 public class StudentAddInsFormService {
 
 	@Autowired
-	private StudentAddInsFormRepository stdAddInsForm;
+	private StudentAddInsFormRepository AddformRepository;
 	
 	public Iterable<StudentAddInsForm> getstddata(){
-		return stdAddInsForm.findAll();
+		return AddformRepository.findAll();
 	}
 	
-	//public Iterable<StudentAddInsForm> getstddataById(int stdId){
-	//	return stdAddInsForm.getBystdId(stdId);
-	//}
-	
-	public StudentAddInsForm addInsForm(StudentAddInsForm newStudentAddInsForm) {
-		StudentAddInsForm stdaddinsform = stdAddInsForm.save(newStudentAddInsForm);
-		return stdAddInsForm.save(stdaddinsform);
+	public Iterable<StudentAddInsForm> getstddataById(int stdId){
+		return AddformRepository.getBystdId(stdId);
 	}
+	
+	public StudentAddInsForm addInsForm (StudentAddInsForm newStudentAddInsForm) {
+		StudentAddInsForm stdaddinsform = AddformRepository.save(newStudentAddInsForm);
+		return AddformRepository.save(stdaddinsform);
+	}
+	
 }
