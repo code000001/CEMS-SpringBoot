@@ -1,5 +1,7 @@
 package cems.project.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +17,13 @@ import cems.project.services.StudentPrintoutService;
 @RequestMapping(path="/cems")
 public class StudentPrintoutController {
 
+	Logger logger = LoggerFactory.getLogger(StudentPrintoutController.class);
 	@Autowired
 	private StudentPrintoutService stdprintoutService;
 	
 	@GetMapping(path="/std_printout_ins001/{id}")
-	public @ResponseBody Iterable<StudentPrintout> getBystdId(@PathVariable("id") int stdId) {	
+	public @ResponseBody StudentPrintout getBystdId(@PathVariable("id") int stdId) {	
+		logger.info("test : "+ stdId);
 		return stdprintoutService.getstudentdata(stdId);
 	}
 	

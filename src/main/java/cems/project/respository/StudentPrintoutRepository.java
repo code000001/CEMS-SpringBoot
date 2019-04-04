@@ -11,5 +11,5 @@ public interface StudentPrintoutRepository extends CrudRepository<StudentPrintou
 
 	public StudentPrintout findById(int id);
 	public List<StudentPrintout> getById(int id);
-	public List<StudentPrintout> getBystdId(int stdId);
+	public StudentPrintout getByStdAccId(int stdAccId);
 }

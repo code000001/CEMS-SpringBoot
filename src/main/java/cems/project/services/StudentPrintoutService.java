@@ -14,7 +14,7 @@ public class StudentPrintoutService {
 	@Autowired
 	private StudentPrintoutRepository stdPrintout;
 	
-	public Iterable<StudentPrintout> getstudentdata(int stdId){
-		return stdPrintout.getBystdId(stdId);
+	public StudentPrintout getstudentdata(int stdId){
+		return stdPrintout.getByStdAccId(stdId);
 	}
 }
