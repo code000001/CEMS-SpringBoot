@@ -10,5 +10,6 @@ public interface AnnouncementRepository extends CrudRepository<Announcement, Int
 	
 	public Announcement findById(int id);
 	public List<Announcement> getById(int id);
+	public List<Announcement> getByannOrgId(int annOrgId);
 
 }
