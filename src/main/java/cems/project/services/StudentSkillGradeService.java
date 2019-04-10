@@ -15,4 +15,8 @@ public class StudentSkillGradeService {
 	@Autowired
 	private StudentSkillGradeRepository stdSkillGrade;
 	
+	public StudentSkillGrade getstdskill (int stdId) {
+		return stdSkillGrade.getBystdAccId(stdId);
+	}
+	
 }
