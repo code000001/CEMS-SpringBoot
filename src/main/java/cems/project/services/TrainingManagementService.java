@@ -13,10 +13,5 @@ public class TrainingManagementService {
 	
 	@Autowired
 	private TrainingManagementRespository TrainManageResporitory;
-
-	public Iterable<TrainingManagement> getStudentData() {
-		
-		return TrainManageResporitory.findAll();
-	}
 	
 }

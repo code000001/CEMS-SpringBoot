@@ -45,7 +45,7 @@ public class StudentAddInsForm {
 	public String getStdFirstnameTh() {
 		return stdFirstnameTH;
 	}
-	public void setStdFirstnameTH(String stdFirstnameTH) {
+	public void setStdFirstnameTh(String stdFirstnameTH) {
 		this.stdFirstnameTH = stdFirstnameTH;
 	}
 	
@@ -54,7 +54,7 @@ public class StudentAddInsForm {
 	public String getStdLastnameTh() {
 		return stdLastnameTH;
 	}
-	public void setStdLadtnameTh(String stdLastnameTH) {
+	public void setStdLastnameTh(String stdLastnameTH) {
 		this.stdLastnameTH = stdLastnameTH;
 	}
 	

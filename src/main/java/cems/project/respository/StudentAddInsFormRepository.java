@@ -10,4 +10,5 @@ public interface StudentAddInsFormRepository extends CrudRepository<StudentAddIn
 	public StudentAddInsForm findById(int id);
 	public List<StudentAddInsForm> getById(int id);
 	public List<StudentAddInsForm> getBystdId(int stdId);
+	public StudentAddInsForm getBystdAccId(int stdId);
 }

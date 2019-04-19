@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "std_data,student_training_data")
+@Table(name = "std_data")
 public class TrainingManagement {
 	
 	@Id
@@ -68,14 +68,5 @@ public class TrainingManagement {
 	}
 	public void setStdHrConference(Integer stdHrConference) {
 		this.stdHrConference = stdHrConference;
-	}
-	
-	@Column(name = "std_train_name_th")
-	private String stdTrainTh;
-	public String getStdTringTH() {
-		return stdTrainTh;
-	}
-	public void setStdTrainTH(String stdTrainTh) {
-		this.stdTrainTh = stdTrainTh;
 	}
 }
