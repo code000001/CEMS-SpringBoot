@@ -75,6 +75,7 @@ public class AppFormService {
 		currentStd.setStdNowAddress(std.getStdNowAddress());
 		currentStd.setStdTel(std.getStdTel());
 		currentStd.setStdParentMobileTel(std.getStdParentMobileTel());
+
 		StdAppInfoRepository.save(currentStd);
 		// เงื่อนไขก่อนเปลี่ยน
 		// จัด/แบ่ง ฟังก์ชั่น
@@ -90,6 +91,9 @@ public class AppFormService {
 		// currentStd.setStdpareTel(std.getStdParentTel());
 		// StudentPrintoutRepository.save(currentStd);
 		// App Coop
+		
+		currentStdAC.setStdLastGpa(std.getStd_LastGpa());
+		currentStdAC.setStdAge(std.getStdAge());
 		currentStdAC.setStdHsGpa(std.getStdHsGpa());
 		currentStdAC.setStdBornPlace(std.getStdBornPlace());
 		currentStdAC.setStdNation(std.getStdNation());
