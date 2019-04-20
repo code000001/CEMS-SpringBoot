@@ -22,6 +22,9 @@ public class StudentAllInfo {
     @Column(name = "std_id")
     private Integer stdId;
 
+    @Column(name = "std_org_id")
+    private Integer stdOrgId;
+
     @Column(name = "status_name_th")
     private String stdStatusTh;
 
@@ -1083,6 +1086,20 @@ public class StudentAllInfo {
      */
     public void setStdId(Integer stdId) {
         this.stdId = stdId;
+    }
+
+    /**
+     * @return the stdOrgId
+     */
+    public Integer getstdOrgId() {
+        return stdOrgId;
+    }
+
+    /**
+     * @param stdOrgId the stdOrgId to set
+     */
+    public void setstdOrgId(Integer stdOrgId) {
+        this.stdOrgId = stdOrgId;
     }
 
 }
