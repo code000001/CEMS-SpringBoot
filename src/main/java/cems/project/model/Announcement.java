@@ -56,19 +56,19 @@ public class Announcement{
 		this.annStatusId = annStatusId;
 	}
 
-	public String getAnnAccId() {
+	public Integer getAnnAccId() {
 		return annAccId;
 	}
 
-	public void setAnnAccId(String annAccId) {
+	public void setAnnAccId(Integer annAccId) {
 		this.annAccId = annAccId;
 	}
 
-	public String getAnnOrgId() {
+	public Integer getAnnOrgId() {
 		return annOrgId;
 	}
 
-	public void setAnnOrgId(String annOrgId) {
+	public void setAnnOrgId(Integer annOrgId) {
 		this.annOrgId = annOrgId;
 	}
 
