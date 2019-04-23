@@ -18,10 +18,10 @@ public class Announcement{
 	private Integer annStatusId;
 	
 	@Column(name="ann_acc_id")
-	private String annAccId;
+	private Integer annAccId;
 	
 	@Column(name="ann_org_id")
-	private String annOrgId;
+	private Integer annOrgId;
 	
 	@Column(name="ann_start_date")
 	private String annStartDate;
