@@ -133,7 +133,7 @@ public class AnnouncementController {
 	@PostMapping(path="/announcement")
 	public ResponseEntity<String> addAnnouncement(@RequestBody Announcement newAnnouncement) {
 		HttpHeaders responseHeaders = new HttpHeaders();
-		   
+		newAnnouncement.setAnnStatusId(1);
 		if((newAnnouncement.getAnnEndDate()).equals(null)||(newAnnouncement.getAnnStartDate()).equals(null)
 				||(newAnnouncement.getAnnOrgId()).equals(null)||(newAnnouncement.getAnnItemReq()).equals(null)
 				||(newAnnouncement.getAnnAccId()).equals(null)||(newAnnouncement.getAnnStdAmount()).equals(null)

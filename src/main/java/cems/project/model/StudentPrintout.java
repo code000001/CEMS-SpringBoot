@@ -22,6 +22,16 @@ public class StudentPrintout {
 		
 	}
 	
+	@Column(name = "std_status_id")
+	private Integer stdStatusId;
+	public Integer stdStatusId() {
+		return stdStatusId;
+		
+	}
+	public void stdStatusId(Integer stdStatusId) {
+		this.stdStatusId = stdStatusId;
+	}
+	
 	@Column(name = "std_id")
 	private Integer stdId;
 	public Integer getStdId() {
