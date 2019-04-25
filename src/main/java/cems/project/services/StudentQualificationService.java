@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service;
 import cems.project.model.StudentQualificationOrgDetail;
 import cems.project.model.StudentQualificationPersonDetail;
 import cems.project.model.StudentQualificationStatus;
+import cems.project.model.StudentQualifyingData;
 import cems.project.respository.StudentQualificationOrgRepository;
 import cems.project.respository.StudentQualificationRepository;
 import cems.project.respository.StudentQualificationStatusRepository;
+import cems.project.respository.StudentQualifyingDataRepository;
 
 @Service
 @Configuration
@@ -26,6 +28,8 @@ public class StudentQualificationService {
 	@Autowired
 	private StudentQualificationStatusRepository sqcStatusRepository;
 	
+	@Autowired
+	private StudentQualifyingDataRepository sqdRepository;
 	
 public StudentQualificationPersonDetail getAccountRegisteredData(int std_acc_id){
 		
@@ -45,5 +49,21 @@ public StudentQualificationPersonDetail getAccountRegisteredData(int std_acc_id)
 	public Iterable<StudentQualificationStatus> getStudentStatusData(){
 		
 		return sqcStatusRepository.findAll();
+	}
+	public StudentQualifyingData updateStudentStatus(int id, StudentQualifyingData stdStatus) {
+		StudentQualifyingData curStatus = sqdRepository.findByStdAccId(id);
+		if (sqdRepository.findByStdAccId(id).equals(null)) {
+			throw new ArithmeticException("Invalid ID.");
+		}
+		
+		if(stdStatus.getStdStatusId().equals(2)) {
+			curStatus.setStdOrgId(null);
+		}
+		if(stdStatus.getStdStatusId().equals(3)) {
+			curStatus.setStdOrgId(stdStatus.getStdOrgId());
+		}
+		curStatus.setStdStatusId(stdStatus.getStdStatusId());
+		return sqdRepository.save(curStatus);	
+
 	}
 }

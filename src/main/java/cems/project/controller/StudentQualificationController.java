@@ -5,6 +5,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import cems.project.model.StudentQualificationOrgDetail;
 import cems.project.model.StudentQualificationPersonDetail;
 import cems.project.model.StudentQualificationStatus;
+import cems.project.model.StudentQualifyingData;
 import cems.project.services.StudentQualificationService;
 
 @CrossOrigin
@@ -38,5 +42,9 @@ public class StudentQualificationController {
 	public @ResponseBody Iterable<StudentQualificationStatus> getAllStudentStatusData(){
 		
 		return sqcService.getStudentStatusData();
+	}
+	@PutMapping(path="/update_student_status_org/{id}")
+	public StudentQualifyingData updateAnnouncement(@PathVariable("id") int id,@RequestBody StudentQualifyingData updateStudentStatus) {
+		return sqcService.updateStudentStatus(id, updateStudentStatus);
 	}
 }

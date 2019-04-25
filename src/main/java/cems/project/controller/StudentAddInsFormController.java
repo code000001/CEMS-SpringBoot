@@ -35,7 +35,6 @@ public class StudentAddInsFormController {
 //		logger.info("name : "+ newStdaddinsform.getStdFirstnameTh());
 		return stdaddService.addupInsForm(stdId, newStdaddinsform);
 	}
+	
 
-	
-	
 }
