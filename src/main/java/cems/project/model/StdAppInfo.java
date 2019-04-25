@@ -27,6 +27,12 @@ public class StdAppInfo {
     @Column(name = "std_id")
     private Integer stdId;
 
+    @Column(name = "std_th_prefix")
+    private String stdPrefixTh;
+
+    @Column(name = "std_en_prefix")
+    private String stdPrefixEn;
+
     @Column(name = "std_first_name_th")
     private String stdFirstNameTh;
 
@@ -78,9 +84,6 @@ public class StdAppInfo {
     @Column(name = "std_email")
     private String stdEmail;
 
-    @Column(name = "std_post_no")
-    private String stdPostNo;
-
     @Column(name = "std_parent_first_name")
     private String stdParentFirstName;
 
@@ -99,11 +102,23 @@ public class StdAppInfo {
     @Column(name = "std_parent_tel")
     private String stdParentTel;
 
-    @Column(name = "std_parent_post_no")
-    private String stdParentPostNo;
+    @Column(name = "std_parent_mobile")
+    private String stdParentMobile;
 
-    @Column(name = "std_parent_mobile_tel")
-    private String stdParentMobileTel;
+    @Column(name = "std_skill_HTML")
+    private String stdSkillHTML;
+
+    @Column(name = "std_skill_PHP")
+    private String stdSkillPHP;
+    
+    @Column(name = "std_skill_CSS")
+    private String stdSkillCSS;
+
+    @Column(name = "std_skill_SQL")
+    private String stdSkillSQL;
+    
+    @Column(name = "std_skill_JS")
+    private String stdSkillJS;
 
     /**
      * @return the id
@@ -173,6 +188,34 @@ public class StdAppInfo {
      */
     public void setStdId(Integer stdId) {
         this.stdId = stdId;
+    }
+
+    /**
+     * @return the stdPrefixTh
+     */
+    public String getStdPrefixTh() {
+        return stdPrefixTh;
+    }
+
+    /**
+     * @param stdPrefixTh the stdPrefixTh to set
+     */
+    public void setStdPrefixTh(String stdPrefixTh) {
+        this.stdPrefixTh = stdPrefixTh;
+    }
+
+    /**
+     * @return the stdPrefixEn
+     */
+    public String getStdPrefixEn() {
+        return stdPrefixEn;
+    }
+
+    /**
+     * @param stdPrefixEn the stdPrefixEn to set
+     */
+    public void setStdPrefixEn(String stdPrefixEn) {
+        this.stdPrefixEn = stdPrefixEn;
     }
 
     /**
@@ -414,20 +457,6 @@ public class StdAppInfo {
     }
 
     /**
-     * @return the stdPostNo
-     */
-    public String getStdPostNo() {
-        return stdPostNo;
-    }
-
-    /**
-     * @param stdPostNo the stdPostNo to set
-     */
-    public void setStdPostNo(String stdPostNo) {
-        this.stdPostNo = stdPostNo;
-    }
-
-    /**
      * @return the stdParentFirstName
      */
     public String getStdParentFirstName() {
@@ -512,30 +541,87 @@ public class StdAppInfo {
     }
 
     /**
-     * @return the stdParentPostNo
+     * @return the stdParentMobile
      */
-    public String getStdParentPostNo() {
-        return stdParentPostNo;
+    public String getStdParentMobile() {
+        return stdParentMobile;
     }
 
     /**
-     * @param stdParentPostNo the stdParentPostNo to set
+     * @param stdParentMobile the stdParentMobile to set
      */
-    public void setStdParentPostNo(String stdParentPostNo) {
-        this.stdParentPostNo = stdParentPostNo;
+    public void setStdParentMobile(String stdParentMobile) {
+        this.stdParentMobile = stdParentMobile;
     }
 
     /**
-     * @return the stdParentMobileTel
+     * @return the stdSkillHTML
      */
-    public String getStdParentMobileTel() {
-        return stdParentMobileTel;
+    public String getStdSkillHTML() {
+        return stdSkillHTML;
     }
 
     /**
-     * @param stdParentMobileTel the stdParentMobileTel to set
+     * @param stdSkillHTML the stdSkillHTML to set
      */
-    public void setStdParentMobileTel(String stdParentMobileTel) {
-        this.stdParentMobileTel = stdParentMobileTel;
+    public void setStdSkillHTML(String stdSkillHTML) {
+        this.stdSkillHTML = stdSkillHTML;
     }
+
+    /**
+     * @return the stdSkillPHP
+     */
+    public String getStdSkillPHP() {
+        return stdSkillPHP;
+    }
+
+    /**
+     * @param stdSkillPHP the stdSkillPHP to set
+     */
+    public void setStdSkillPHP(String stdSkillPHP) {
+        this.stdSkillPHP = stdSkillPHP;
+    }
+
+    /**
+     * @return the stdSkillCSS
+     */
+    public String getStdSkillCSS() {
+        return stdSkillCSS;
+    }
+
+    /**
+     * @param stdSkillCSS the stdSkillCSS to set
+     */
+    public void setStdSkillCSS(String stdSkillCSS) {
+        this.stdSkillCSS = stdSkillCSS;
+    }
+
+    /**
+     * @return the stdSkillSQL
+     */
+    public String getStdSkillSQL() {
+        return stdSkillSQL;
+    }
+
+    /**
+     * @param stdSkillSQL the stdSkillSQL to set
+     */
+    public void setStdSkillSQL(String stdSkillSQL) {
+        this.stdSkillSQL = stdSkillSQL;
+    }
+
+    /**
+     * @return the stdSkillJS
+     */
+    public String getStdSkillJS() {
+        return stdSkillJS;
+    }
+
+    /**
+     * @param stdSkillJS the stdSkillJS to set
+     */
+    public void setStdSkillJS(String stdSkillJS) {
+        this.stdSkillJS = stdSkillJS;
+    }
+
 }

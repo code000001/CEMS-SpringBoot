@@ -68,19 +68,19 @@ public class AppFormService {
 		StdAppInfo currentStd = StdAppInfoRepository.findById(id);
 		currentStd.setStdParentTel(std.getStdParentTel());
 		currentStd.setStdStatusId(3);
-		currentStd.setStdOrgId(std.getstdOrgId());
+		currentStd.setStdOrgId(std.getStdOrgId());
 		currentStd.setStdGpax(std.getStdGpax());
 		currentStd.setStdYear(std.getStdYear());
 		currentStd.setStdHouseParticularsAddress(std.getStdHouseParticularsAddress());
 		currentStd.setStdNowAddress(std.getStdNowAddress());
 		currentStd.setStdTel(std.getStdTel());
-		currentStd.setStdParentMobileTel(std.getStdParentMobileTel());
+		currentStd.setStdParentMobile(std.getStdParentMobile());
 
 		StdAppInfoRepository.save(currentStd);
 		// เงื่อนไขก่อนเปลี่ยน
 		// จัด/แบ่ง ฟังก์ชั่น
-
-		StdAppCoop currentStdAC = StdAppCoopRepository.findById(id);
+		id = currentStd.getStdAccId();
+		StdAppCoop currentStdAC = StdAppCoopRepository.findByStdDataId(id);
 		// logger.info("Name : "+ currentStd.getAccFirstNameEn());
 		// logger.info("tel : "+ std.getStdParentTel());
 		// if (std.getId().equals(null)) {

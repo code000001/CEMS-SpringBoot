@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 // import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -55,6 +56,8 @@ public class StudentOrgApplicationFormController {
 		return AppFormService.getDistrictsByAmphure(amp_id);
 	}
 
+	
+	// @RequestMapping(value = "/updateProfileAppForm/{id}", method = RequestMethod.PUT)
 	@PutMapping(path = "/updateProfileAppForm/{id}")
 	public StdAppCoop updateProfileAppForm(@PathVariable("id") int id, @RequestBody StudentAllInfo body) {
 		// Optional<StdAppCoop> customer = customerService.updateCustomer(id, body);
