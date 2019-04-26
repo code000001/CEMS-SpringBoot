@@ -31,6 +31,15 @@ public class StudentAddInsForm {
 		this.stdStatusId = stdStatusId;
 	}
 	
+	@Column(name = "std_org_id")
+	private Integer stdOrgId;
+	public Integer getStdOrgId() {
+		return stdOrgId;
+	}
+	public void setStdOrgId(Integer stdOrgId) {
+		this.stdOrgId = stdStatusId;
+	}
+	
 	@Column(name = "std_id")
 	private Integer stdId;
 	public Integer getStdId() {

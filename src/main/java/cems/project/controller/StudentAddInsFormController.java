@@ -30,6 +30,12 @@ public class StudentAddInsFormController {
 		return stdaddService.getstddataById(stdId);
 	}
 	
+	@GetMapping(path="/all_std_data")
+	public @ResponseBody Iterable<StudentAddInsForm> getstddata(){
+		
+		return stdaddService.getstddata();
+	}
+	
 	@PutMapping(path="/std_addform/{id}")
 	public StudentAddInsForm addupInsForm(@PathVariable("id") int stdId, @RequestBody StudentAddInsForm newStdaddinsform) {
 //		logger.info("name : "+ newStdaddinsform.getStdFirstnameTh());
