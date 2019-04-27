@@ -8,4 +8,5 @@ public interface TrainingManagementRespository extends CrudRepository<TrainingMa
 
 	public TrainingManagement findById(int id);
 	public List<TrainingManagement> getById(int id);
+	//public TrainingManagement getByAccstdId(int stdId);
 }

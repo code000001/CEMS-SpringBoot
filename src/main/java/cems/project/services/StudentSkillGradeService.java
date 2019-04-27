@@ -19,4 +19,14 @@ public class StudentSkillGradeService {
 		return stdSkillGrade.getBystdAccId(stdId);
 	}
 	
+	public StudentSkillGrade addupskill(int stdId, StudentSkillGrade newStudentSkillGrade) {
+		StudentSkillGrade currentStudent = stdSkillGrade.findById(stdId);
+		currentStudent.setStdSkillHtml(newStudentSkillGrade.getStdSkillHtml());
+		currentStudent.setStdSkillCss(newStudentSkillGrade.getStdSkillCss());
+		currentStudent.setStdSkillPhp(newStudentSkillGrade.getStdSkillPhp());
+		currentStudent.setStdSkillSql(newStudentSkillGrade.getStdSkillSql());
+		currentStudent.setStdSkillJs(newStudentSkillGrade.getStdSkillJs());
+		return stdSkillGrade.save(currentStudent);
+		
+	}
 }

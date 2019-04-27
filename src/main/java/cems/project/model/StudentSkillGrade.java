@@ -19,7 +19,6 @@ public class StudentSkillGrade {
 	private Integer stdAccId;
 	public Integer getStdAccId() {
 		return stdAccId;
-		
 	}
 	
 	@Column(name = "std_id")
