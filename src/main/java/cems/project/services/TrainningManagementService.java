@@ -4,14 +4,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
+import cems.project.respository.TrainningManagementRepository;
 import cems.project.model.TrainingManagement;
-import cems.project.respository.TrainingManagementRespository;
 
 @Service
 @Configuration
-public class TrainingManagementService {
-	
+public class TrainningManagementService {
+
 	@Autowired
-	private TrainingManagementRespository TrainManageResporitory;
+	private TrainningManagementRepository trainReporitory;
+	
+	public Iterable<TrainingManagement> getAlltraindata() {
+		return trainReporitory.findAll();
+	}
 	
 }
