@@ -14,8 +14,8 @@ public class StudentAddInsFormService {
 	@Autowired
 	private StudentAddInsFormRepository AddformRepository;
 	
-	public Iterable<StudentAddInsForm> getstddata(){
-		return AddformRepository.findAll();
+	public Iterable<StudentAddInsForm> getstddata(int stdStatusId){
+		return AddformRepository.getByStdStatusId(stdStatusId);
 	}
 	
 	public StudentAddInsForm getstddataById(int stdId){
