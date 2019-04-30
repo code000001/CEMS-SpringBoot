@@ -14,9 +14,18 @@ public class StudentAddInsFormService {
 	@Autowired
 	private StudentAddInsFormRepository AddformRepository;
 	
+	/* Author			: Phakhanan Thongmee
+	 * Author ID		: 58160673
+	 * Function			: getstddata
+	 * Function input	: as parameter	=> student status id (stdStatusId) : int
+	 * Function output	: all student data with the specific status
+	 * Purpose			: response of student data with the specific status in qualification module on Cooperative Education Management System
+	 * Last edited		: 01/05/2019
+	 */
 	public Iterable<StudentAddInsForm> getstddata(int stdStatusId){
 		return AddformRepository.getByStdStatusId(stdStatusId);
 	}
+	//END OF getstddata
 	
 	public StudentAddInsForm getstddataById(int stdId){
 		return AddformRepository.getBystdAccId(stdId);

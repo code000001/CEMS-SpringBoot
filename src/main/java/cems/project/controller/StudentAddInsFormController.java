@@ -30,15 +30,26 @@ public class StudentAddInsFormController {
 		return stdaddService.getstddataById(stdId);
 	}
 	
+	/* Author			: Phakhanan Thongmee
+	 * Author ID		: 58160673
+	 * Function			: GET all_std_data
+	 * Function input	: 
+	 * 						as path 		=> student status id (stdStatusId) : int
+	 * 						as parameter	=> -
+	 * Function output	: all student data with the specific status
+	 * Purpose			: GET api for student data with the specific status in qualification module on Cooperative Education Management System
+	 * Last edited		: 01/05/2019
+	 */
 	@GetMapping(path="/all_std_data/{id}")
 	public @ResponseBody Iterable<StudentAddInsForm> getstddata(@PathVariable("id") int stdStatusId){
 		
 		return stdaddService.getstddata(stdStatusId);
 	}
+	//END OF GET all_std_data
 	
 	@PutMapping(path="/std_addform/{id}")
 	public StudentAddInsForm addupInsForm(@PathVariable("id") int stdId, @RequestBody StudentAddInsForm newStdaddinsform) {
-//		logger.info("name : "+ newStdaddinsform.getStdFirstnameTh());
+	//		logger.info("name : "+ newStdaddinsform.getStdFirstnameTh());
 		return stdaddService.addupInsForm(stdId, newStdaddinsform);
 	}
 	

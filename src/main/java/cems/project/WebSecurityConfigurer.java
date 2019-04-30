@@ -21,6 +21,12 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import cems.project.services.UserServiceImp;
 
+/* Author			: Phakhanan Thongmee
+ * Author ID		: 58160673
+ * Class			: WebSecurityConfigurer inherited from WebSecurityConfigurerAdapter
+ * Module			: Authentication
+ * Last edited		: 01/05/2019
+ */
 @Configuration
 public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter{
 	
@@ -28,6 +34,14 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter{
 	@Autowired
 	UserServiceImp userServiceImp;
 
+	/* Author			: Phakhanan Thongmee
+	 * Author ID		: 58160673
+	 * Function			: corsConfigurationSource
+	 * Function input	: -
+	 * Function output	: http config
+	 * Purpose			: create http configuration source
+	 * Last edited		: 01/05/2019
+	 */
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 		final CorsConfiguration configuration = new CorsConfiguration();
@@ -39,7 +53,16 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter{
 		source.registerCorsConfiguration("/**", configuration);
 		return source;
 	}
+	//END OF corsConfigurationSource
 
+	/* Author			: Phakhanan Thongmee
+	 * Author ID		: 58160673
+	 * Function			: configure
+	 * Function input	: as parameter => http : HttpSecurity
+	 * Function output	: authorize configure
+	 * Purpose			: create authorization configuration
+	 * Last edited		: 01/05/2019
+	 */
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.cors()
@@ -54,19 +77,38 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter{
 		.and().httpBasic()
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
 	}
+	//END OF configure
 	
-	
+	/* Author			: Phakhanan Thongmee
+	 * Author ID		: 58160673
+	 * Function			: passwordEncoder
+	 * Function input	: -
+	 * Function output	: encoded password
+	 * Purpose			: create password that encoded by BCrypt
+	 * Last edited		: 01/05/2019
+	 */
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		
 		return new BCryptPasswordEncoder();
 	}
+	//END OF passwordEncoder
 	
+	/* Author			: Phakhanan Thongmee
+	 * Author ID		: 58160673
+	 * Function			: configure
+	 * Function input	: as parameter => auth : AuthenticationManagerBuilder
+	 * Function output	: configure with encoded password
+	 * Purpose			: create authentication service with encoded password
+	 * Last edited		: 01/05/2019
+	 */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     	BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-    	logger.info("Password encoded yo : "+  BCrypt.hashpw("58160651", BCrypt.gensalt()));
+    	logger.info("Password encoded : "+  BCrypt.hashpw("58160651", BCrypt.gensalt()));
         auth.userDetailsService(userServiceImp).passwordEncoder(passwordEncoder);
     }
+    //END OF configure
 	
 }
+//END OF CLASS WebSecurityConfigurer

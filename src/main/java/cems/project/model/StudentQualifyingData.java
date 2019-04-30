@@ -7,6 +7,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/* Author			: Phakhanan Thongmee
+ * Author ID		: 58160673
+ * Class			: StudentQualifyingData
+ * Module			: Student qualification
+ * Last edited		: 01/05/2019
+ * Purpose			: Contain 
+ * 						=> getter
+ * 						=> setter
+ * 					  of variables. 
+ * 					  This class connect to database in std_data table
+ */
 @Entity
 @Table(name = "std_data")
 public class StudentQualifyingData {
@@ -40,3 +51,4 @@ public class StudentQualifyingData {
 	}
 	
 }
+//END OF CLASS StudentQualifyingData
