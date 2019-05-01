@@ -7,6 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/* Author			: Ruksina Prommee
+ * Author ID		: 58160247
+ * Class			: AnnouncementStatus
+ * Module			: Announcement data status
+ * Last edited		: 01/05/2019
+ * Purpose			: Contain 
+ * 						=> getter
+ * 						=> setter
+ * 					  of variables. 
+ * 					  This class connect to database in announcement_status table
+ */
 @Entity
 @Table(name = "announcement_status")
 public class AnnouncementStatus {

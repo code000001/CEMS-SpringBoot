@@ -7,6 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/* Author			: Ruksina Prommee
+ * Author ID		: 58160247
+ * Class			: StaffOrgData
+ * Module			: Staff Organization data
+ * Last edited		: 01/05/2019
+ * Purpose			: Contain 
+ * 						=> getter
+ * 						=> setter
+ * 					  of variables. 
+ * 					  This class connect to database in staff_org_data table
+ */
 @Entity
 @Table(name = "staff_org_data")
 public class StaffOrgData {

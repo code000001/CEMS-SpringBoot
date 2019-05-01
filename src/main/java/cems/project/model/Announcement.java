@@ -7,6 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/* Author			: Ruksina Prommee
+ * Author ID		: 58160247
+ * Class			: Announcement
+ * Module			: Announcement data
+ * Last edited		: 01/05/2019
+ * Purpose			: Contain 
+ * 						=> getter
+ * 						=> setter
+ * 					  of variables. 
+ * 					  This class connect to database in announcement_data table
+ */
 @Entity
 @Table(name = "announcement_data")
 public class Announcement{
@@ -118,11 +130,7 @@ public class Announcement{
 
 	public void setAnnItemReq(String annItemReq) {
 		this.annItemReq = annItemReq;
-	}
-
-	
-
-
-	
+	}	
 	
 }
+//END OF CLASS Announcement

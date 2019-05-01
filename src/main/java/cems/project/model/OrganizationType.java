@@ -7,6 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/* Author			: Ruksina Prommee
+ * Author ID		: 58160247
+ * Class			: OrganizationType
+ * Module			: OrganizationType data
+ * Last edited		: 01/05/2019
+ * Purpose			: Contain 
+ * 						=> getter
+ * 						=> setter
+ * 					  of variables. 
+ * 					  This class connect to database in org_type table
+ */
 @Entity
 @Table(name = "org_type")
 public class OrganizationType {
