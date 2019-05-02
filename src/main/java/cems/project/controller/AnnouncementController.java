@@ -323,7 +323,7 @@ public class AnnouncementController {
 		else {
 		annService.addAnnouncement(newAnnouncement);	
 		responseHeaders.set("ResponeAddAnnouncement", "Success");
-		return new ResponseEntity<String>("Success", responseHeaders, HttpStatus.ACCEPTED);
+		return new ResponseEntity<String>("Success", responseHeaders, HttpStatus.OK);
 		}
 	}
 	
