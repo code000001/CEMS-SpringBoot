@@ -7,6 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/* Author			: Ruksina Prommee
+ * Author ID		: 58160247
+ * Class			: PositionData
+ * Module			: Position data
+ * Last edited		: 01/05/2019
+ * Purpose			: Contain 
+ * 						=> getter
+ * 						=> setter
+ * 					  of variables. 
+ * 					  This class connect to database in announcement_position_data table
+ */
 @Entity
 @Table(name = "announcement_position_data")
 public class PositionData {
