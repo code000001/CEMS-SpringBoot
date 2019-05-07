@@ -88,7 +88,7 @@ public class StudentQualificationController {
 	 * Last edited		: 01/05/2019
 	 */
 	@PutMapping(path="/update_student_status_org/{id}")
-	public StudentQualifyingData updateAnnouncement(@PathVariable("id") int id,@RequestBody StudentQualifyingData updateStudentStatus) {
+	public StudentQualifyingData updateStudentStatus(@PathVariable("id") int id,@RequestBody StudentQualifyingData updateStudentStatus) {
 		return sqcService.updateStudentStatus(id, updateStudentStatus);
 	}
 	// END OF PUT update_student_status_org
