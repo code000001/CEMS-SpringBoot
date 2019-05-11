@@ -352,7 +352,7 @@ public class AnnouncementService {
 	 * Last edited		: 01/05/2019
 	 */
 	public Announcement updateAnnouncement(int id, Announcement newAnnouncement) {
-		Announcement currentAnnouncement = annRepository.findById(id);
+		Announcement currentAnnouncement = annRepository.findByannOrgId(id);
 		if (newAnnouncement.getAnnAccId().equals(null)) {
 			throw new ArithmeticException("Has not this id");
 		}
