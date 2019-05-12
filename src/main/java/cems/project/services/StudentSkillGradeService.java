@@ -20,7 +20,7 @@ public class StudentSkillGradeService {
 	}
 	
 	public StudentSkillGrade addupskill(int stdId, StudentSkillGrade newStudentSkillGrade) {
-		StudentSkillGrade currentStudent = stdSkillGrade.findById(stdId);
+		StudentSkillGrade currentStudent = stdSkillGrade.findBystdAccId(stdId);
 		currentStudent.setStdSkillHtml(newStudentSkillGrade.getStdSkillHtml());
 		currentStudent.setStdSkillCss(newStudentSkillGrade.getStdSkillCss());
 		currentStudent.setStdSkillPhp(newStudentSkillGrade.getStdSkillPhp());
